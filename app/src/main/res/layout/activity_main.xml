@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main"
+    android:backgroundTint="@color/blackTint"
+    android:backgroundTintMode="src_over"
+    tools:context="com.example.ran.battleship.MainActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
+
+
+    <TextView
+        android:id="@+id/diff_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-smallcaps"
+       android:layout_centerInParent="true"
+        android:text="@string/choose_difficulty"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+
+    <NumberPicker
+        android:id="@+id/difficultyPickerPicker"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:descendantFocusability="blocksDescendants"
+
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageButton
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/highScoreButton"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/button_start"
+            android:clickable="true"
+            android:gravity="bottom"
+            android:onClick="startGame" />
+
+        <ImageButton
+            android:id="@+id/highScoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_highscore"
+            android:clickable="true"
+            android:onClick="showHighScore" />
+
+
+        <ImageButton
+            android:id="@+id/instructions_button"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/information"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="goToInstructions" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>
